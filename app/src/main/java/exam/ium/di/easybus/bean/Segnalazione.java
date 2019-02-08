@@ -11,7 +11,13 @@ public class Segnalazione {
     private String destinatario;
     private String oggetto;
     private String descrizione;
-    private String tipo; //tipologia di segnalazione
+    private String tipo; //tipologia di segnalazione guasti - sedile rotto - porte che non si aprono
+    /*
+    *  Le segnalazioni sono su eventuali cambi di turno, problematiche che si possono
+     *  incontrare durante il tragitto, fermate che vengono saltate poiché il pullman è pieno, etc.
+    * */
+
+    // tra Autista e Impiegatod
 
     //constructor
     public Segnalazione() {
