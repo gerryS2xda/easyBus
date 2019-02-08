@@ -3,4 +3,5 @@
     <string name="welcome">Benvenuti in EasyBus</string>
     <string name="welcome_area_txt">Benvenuto</string>
     <string name="what_doing_today">Cosa desidera fare?</string>
+    <string name="title_activity_aggiungi_avviso">AggiungiAvviso</string>
 </resources>
