@@ -11,6 +11,7 @@ public class Biglietto {
     private double prezzo;
     private boolean stato; //se convalidato --> true
     private Studente studente;
+    private DatiConvalida con;
 
     //constructor
     public Biglietto(){
@@ -22,9 +23,10 @@ public class Biglietto {
         prezzo = 0;
         stato = false;
         studente = new Studente();
+        con=new DatiConvalida();
     }
 
-    public Biglietto(int id, String azienda, String fascia, String partenza, String arrivo, double prezzo, boolean stato, Studente studente) {
+    public Biglietto(int id, String azienda, String fascia, String partenza, String arrivo, double prezzo, boolean stato, Studente studente,DatiConvalida con) {
         this.id = id;
         this.azienda = azienda;
         this.fascia = fascia;
@@ -33,9 +35,18 @@ public class Biglietto {
         this.prezzo = prezzo;
         this.stato = stato;
         this.studente = studente;
+        this.con=con;
     }
 
     //public methods
+    public void convalidaBiglietto()
+    {
+        con.setBiglietto(this.id);
+        con.setDataConvalida("11/02/2019");
+        con.setOraConvalida("10:45");
+        this.stato=true;
+    }
+
     public int getId() {
         return id;
     }
@@ -98,5 +109,13 @@ public class Biglietto {
 
     public void setStudente(Studente studente) {
         this.studente = studente;
+    }
+
+    public DatiConvalida getConvalida() {
+        return con;
+    }
+
+    public void setConvalida(DatiConvalida con) {
+        this.con = con;
     }
 }

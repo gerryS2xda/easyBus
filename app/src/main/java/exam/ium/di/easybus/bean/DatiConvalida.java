@@ -1,6 +1,6 @@
 package exam.ium.di.easybus.bean;
 
-public class Convalida {
+public class DatiConvalida {
 
     //instance field
     private int biglietto; //associare con id dell'oggetto Biglietto
@@ -8,13 +8,13 @@ public class Convalida {
     private String oraConvalida;
 
     //constructor
-    public Convalida() {
+    public DatiConvalida() {
         biglietto = -1;
         dataConvalida = "";
         oraConvalida = "";
     }
 
-    public Convalida(int biglietto, String dataConvalida, String oraConvalida) {
+    public DatiConvalida(int biglietto, String dataConvalida, String oraConvalida) {
         this.biglietto = biglietto;
         this.dataConvalida = dataConvalida;
         this.oraConvalida = oraConvalida;
