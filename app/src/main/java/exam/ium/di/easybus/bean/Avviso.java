@@ -17,6 +17,7 @@ public class Avviso {
         oggetto = "";
         descrizione = "";
     }
+    // visibile agli utenti
 
     public Avviso(int id, String dataPubblicazione, String azienda, String oggetto, String descrizione) {
         this.id = id;
