@@ -24,7 +24,7 @@ public class VisualizzaAvvisiActivity extends AppCompatActivity {
     private ListView lista;
     private AdapterAvviso adapterAvviso;
     private PopulateAvviso populateAvviso;
-    private Context context=this;
+    private List<Avviso> avvisi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,24 +43,25 @@ public class VisualizzaAvvisiActivity extends AppCompatActivity {
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
 
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        /*spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String azienda = parent.getItemAtPosition(position).toString();
-                List<Avviso> avvisi= populateAvviso.getByAzienda(azienda);
-                lista.deferNotifyDataSetChanged();
+                avvisi= populateAvviso.getByAzienda(azienda);
+                adapterAvviso.notifyDataSetChanged();
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
-        });
+        });*/
 
         //lista view
         populateAvviso= new PopulateAvviso();
         lista= findViewById(R.id.listaAvvisi);
-        adapterAvviso=new AdapterAvviso(this,populateAvviso.getByAzienda("AIR"));
+        avvisi = populateAvviso.getByAzienda("AIR");
+        adapterAvviso=new AdapterAvviso(this,avvisi);
         lista.setAdapter(adapterAvviso);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
