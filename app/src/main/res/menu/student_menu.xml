@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/dati_pers_item"
+        android:title = "I miei dati" />
+    <item android:id="@+id/tratta_prefs"
+        android:title = "Tratte preferite" />
+    <item android:id="@+id/bachAvvItemStud"
+        android:title = "Bacheca avvisi" />
+    <item android:id="@+id/logout_stud"
+        android:title = "Logout" />
+    <item android:id="@+id/exit_btn"
+        android:title = "Esci" />
+</menu>

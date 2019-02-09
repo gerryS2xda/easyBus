@@ -2,14 +2,18 @@ package exam.ium.di.easybus.populate;
 
 import android.util.Log;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 import exam.ium.di.easybus.bean.Avviso;
 
 public class PopulateAvviso {
 
     private List<Avviso> avvisi;
+    private String [] aziende = {"AIR", "SITA", "Lo Conte", "Marozzi"};
 
     public PopulateAvviso(){
         avvisi= new ArrayList<>();
@@ -26,7 +30,23 @@ public class PopulateAvviso {
         return avvisi;
     }
 
-    public void add(Avviso av) {
+    public void add(String titolo, String descrizione) {
+        Avviso av = new Avviso();
+        //setto l'id
+        av.setId(avvisi.size());
+
+        //setto la data odierana
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = new Date();
+        av.setDataPubblicazione(formatter.format(date));
+
+        //oggetto = titolo
+        av.setOggetto(titolo);
+        av.setDescrizione(descrizione);
+
+        //azienda casuale
+        Random random = new Random();
+        av.setAzienda(aziende[random.nextInt(aziende.length)-1]);
         avvisi.add(av);
     }
 
