@@ -10,11 +10,14 @@
         android:layout_height="wrap_content"
         android:stretchColumns="2">
         <TableRow
-            android:padding="15dp">
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tratta"
+                android:text="Tratta:"
                 android:gravity="center"
                 android:paddingTop="10dp"
                 android:paddingLeft="10dp"
@@ -33,11 +36,14 @@
                 android:id="@+id/testotratta"/>
         </TableRow>
         <TableRow
-            android:padding="15dp">
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ID Biglietto"
+                android:text="tipo di Biglietto:"
                 android:gravity="center"
                 android:paddingTop="0dp"
                 android:paddingLeft="10dp"
@@ -47,7 +53,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2"
+                android:text="A2"
                 android:gravity="center"
                 android:paddingTop="0dp"
                 android:paddingLeft="10dp"
@@ -55,6 +61,42 @@
                 android:paddingBottom="0dp"
                 android:id="@+id/idBiglietto"/>
         </TableRow>
+        <TableRow
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prezzo:"
+                android:gravity="center"
+                android:paddingTop="0dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="0dp"
+                android:id="@+id/prezzotesto"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.20€"
+                android:gravity="center"
+                android:paddingTop="0dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="0dp"
+                android:id="@+id/prezzo"/>
+        </TableRow>
+        <Button android:id="@+id/accedi_btn"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_height="50dp"
+            android:layout_width="100dp"
+            android:text="Convalida"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            style = "@style/Widget.AppCompat.Button.Colored"
+            android:layout_gravity="center"/>
     </TableLayout>
 
 
