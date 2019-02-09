@@ -32,7 +32,7 @@
             android:label="@string/title_activity_aggiungi_avviso"
             android:parentActivityName=".ImpiegatoActivity"
             android:theme="@style/NoActionBar">
-            <meta-data
+           <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="exam.ium.di.easybus.ImpiegatoActivity" />
         </activity>

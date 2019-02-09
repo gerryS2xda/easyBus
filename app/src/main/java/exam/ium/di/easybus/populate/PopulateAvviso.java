@@ -17,10 +17,16 @@ public class PopulateAvviso {
 
     public PopulateAvviso(){
         avvisi= new ArrayList<>();
+        avvisi.add(new Avviso(1, "8/02/2019","AIR","Disservizio","Nei mesi di marzo ci saranno dei disservizi per la tratta Fisciano - Avellino"));
+        avvisi.add(new Avviso(2, "9/02/2019","SITA","Disservizio","La tratta Salerno - Fisciano è sospesa"));
+        avvisi.add(new Avviso(3, "10/02/2019","Lo Conte","Ritardo","C'è un ritardo nella tratta Avellino - Fisciano sulla corsa delle 15:45 - 16:15"));
+        avvisi.add(new Avviso(4, "10/02/2019","AIR","Disservizio","Nel giorno 27/02/2019 ci sarà un disserzio nella tratta Benevento - Fisciano a causa di una festa patronale"));
+        avvisi.add(new Avviso(5, "10/02/2019","Lo Conte","Ritardo","C'è un ritardo nella tratta Avellino - Fisciano sulla corsa delle 9:45 - 10:15"));
+
     }
 
     //aggiustare le descrizioni
-    public List<Avviso> populateAvviso() {
+    /*public List<Avviso> populateAvviso() {
         avvisi.add(new Avviso(1, "8/02/2019","AIR","Disservizio","Nei mesi di marzo ci saranno dei disservizi per la tratta Fisciano - Avellino"));
         avvisi.add(new Avviso(2, "9/02/2019","SITA","Disservizio","La tratta Salerno - Fisciano è sospesa"));
         avvisi.add(new Avviso(3, "10/02/2019","Lo Conte","Ritardo","C'è un ritardo nella tratta Avellino - Fisciano sulla corsa delle 15:45 - 16:15"));
@@ -28,7 +34,7 @@ public class PopulateAvviso {
         avvisi.add(new Avviso(5, "10/02/2019","Lo Conte","Ritardo","C'è un ritardo nella tratta Avellino - Fisciano sulla corsa delle 9:45 - 10:15"));
 
         return avvisi;
-    }
+    }*/
 
     public void add(String titolo, String descrizione) {
         Avviso av = new Avviso();
@@ -62,12 +68,13 @@ public class PopulateAvviso {
         return avvisi.get(position);
     }
      public List<Avviso> getByAzienda(String azienda) {
-        List<Avviso> list = new ArrayList<>();
+        List<Avviso> lista = new ArrayList<>();
         for(int i=0;i<avvisi.size();i++) {
-            if(avvisi.get(i).equals(azienda)) {
-                list.add(avvisi.get(i));
+            if(avvisi.get(i).getAzienda().equals(azienda)) {
+                Avviso av =avvisi.get(i);
+                lista.add(av);
             }
         }
-        return  list;
+        return  lista;
      }
 }

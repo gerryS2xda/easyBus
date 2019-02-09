@@ -25,13 +25,13 @@ public class AggiungiAvviso extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        titolo = findViewById(R.id.titolo);
+        descrizione = findViewById(R.id.descrizione);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public void pubblica(View view) {
-        titolo = view.findViewById(R.id.titolo);
-        descrizione = view.findViewById(R.id.descrizione);
         PopulateAvviso avvisi = new PopulateAvviso();
         avvisi.add((String) titolo.getText().toString(),(String) descrizione.getText().toString());
         //svuoto i campi
