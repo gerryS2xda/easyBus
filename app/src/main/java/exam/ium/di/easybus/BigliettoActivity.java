@@ -14,5 +14,6 @@ public class BigliettoActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
+
     }
 }

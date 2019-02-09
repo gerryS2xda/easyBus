@@ -31,6 +31,10 @@ public class PopulateBiglietto {
     {
         biglietti.remove(b);
     }
+    public int size()
+    {
+        return biglietti.size();
+    }
 
     public void setBiglietti(List<Biglietto> biglietti) {
         this.biglietti = biglietti;
