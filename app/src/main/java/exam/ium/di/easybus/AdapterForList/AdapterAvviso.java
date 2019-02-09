@@ -5,11 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 import java.util.List;
 
 import exam.ium.di.easybus.R;
 import exam.ium.di.easybus.bean.Avviso;
+import exam.ium.di.easybus.populate.PopulateAvviso;
 
 public class AdapterAvviso extends BaseAdapter {
 
@@ -38,7 +40,21 @@ public class AdapterAvviso extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        if(convertView == null) {
+            convertView = (View) LayoutInflater.from(context).inflate(R.layout.layout_row_avviso,null);
+        }
 
-        return null;
+        Avviso av = new Avviso();
+        av= avvisi.get(position);
+
+        TextView titolo = (TextView) convertView.findViewById(R.id.titolo);
+        TextView data = (TextView) convertView.findViewById(R.id.data);
+        TextView oggetto = (TextView) convertView.findViewById(R.id.descrizione);
+
+        titolo.setText(av.getOggetto());
+        data.setText(av.getDataPubblicazione());
+        oggetto.setText(av.getDescrizione());
+
+        return convertView;
     }
 }

@@ -13,7 +13,7 @@ import exam.ium.di.easybus.bean.Avviso;
 public class PopulateAvviso {
 
     private List<Avviso> avvisi;
-    private String [] aziende = {"AIR", "SITA", "Lo Conte", "Marozzi"};
+    private String [] aziende = {"AIR", "SITA", "Lo Conte", "Marozzi", "Flix Bus"};
 
     public PopulateAvviso(){
         avvisi= new ArrayList<>();
@@ -57,4 +57,17 @@ public class PopulateAvviso {
     public int size() {
         return avvisi.size();
     }
+
+    public Avviso get(int position) {
+        return avvisi.get(position);
+    }
+     public List<Avviso> getByAzienda(String azienda) {
+        List<Avviso> list = new ArrayList<>();
+        for(int i=0;i<avvisi.size();i++) {
+            if(avvisi.get(i).equals(azienda)) {
+                list.add(avvisi.get(i));
+            }
+        }
+        return  list;
+     }
 }
