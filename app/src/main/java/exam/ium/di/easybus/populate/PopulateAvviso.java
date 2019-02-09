@@ -33,7 +33,7 @@ public class PopulateAvviso {
     public void add(String titolo, String descrizione) {
         Avviso av = new Avviso();
         //setto l'id
-        av.setId(avvisi.size());
+        av.setId(avvisi.size()+1);
 
         //setto la data odierana
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");

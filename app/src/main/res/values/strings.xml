@@ -4,4 +4,14 @@
     <string name="welcome_area_txt">Benvenuto</string>
     <string name="what_doing_today">Cosa desidera fare?</string>
     <string name="title_activity_aggiungi_avviso">AggiungiAvviso</string>
+    <string name="title_activity_segnalazione">SegnalazioneActivity</string>
+    <string-array name="tipo_segnalazione">
+        <item>Guato motore</item>
+        <item>sedile rotto</item>
+        <item>Porta non funzionante</item>
+        <item>Ritardo</item>
+        <item>Sostituzione pullman</item>
+        <item>Aloca pullman</item>
+    </string-array>
+
 </resources>
