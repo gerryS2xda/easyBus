@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
         <activity
+            android:name=".VisualizzaAvvisiActivity"
+            android:label="@string/title_activity_visualizza_avvisi"
+            android:parentActivityName=".StudentActivity"
+            android:theme="@style/NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="exam.ium.di.easybus.StudentActivity" />
+        </activity>
+        <activity
             android:name=".SegnalazioneActivity"
             android:label="@string/title_activity_segnalazione"
             android:parentActivityName=".AutistaActivity"
