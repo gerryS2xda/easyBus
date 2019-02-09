@@ -44,6 +44,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".WelcomeActivity" />
+        <activity android:name=".BigliettoActivity" />
         <activity android:name=".StudentActivity" />
         <activity android:name=".ImpiegatoActivity" />
         <activity android:name=".AutistaActivity" />

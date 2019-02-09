@@ -29,7 +29,9 @@ public class BigliettoActivity extends AppCompatActivity {
 
         lista=findViewById(R.id.lista_biglietti);
         biglietti=p.getLista();
-        AdapterBiglietto =new AdapterBiglietto(biglietti, this);
+        AdapterBiglietto adapterBiglietto = new AdapterBiglietto(biglietti, this);
+
+        lista.setAdapter(adapterBiglietto);
 
 
     }
