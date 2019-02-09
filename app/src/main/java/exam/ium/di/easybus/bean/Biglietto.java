@@ -45,6 +45,8 @@ public class Biglietto {
         con.setDataConvalida("11/02/2019");
         con.setOraConvalida("10:45");
         this.stato=true;
+
+
     }
 
     public int getId() {

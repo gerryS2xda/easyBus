@@ -9,7 +9,7 @@ public class DatiConvalida {
 
     //constructor
     public DatiConvalida() {
-        biglietto = -1;
+        biglietto = 0;
         dataConvalida = "";
         oraConvalida = "";
     }
