@@ -39,4 +39,8 @@ public class PopulateBiglietto {
     public void setBiglietti(List<Biglietto> biglietti) {
         this.biglietti = biglietti;
     }
+    public List<Biglietto> getLista()
+    {
+        return this.biglietti;
+    }
 }

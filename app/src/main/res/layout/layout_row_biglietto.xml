@@ -10,29 +10,37 @@
         android:layout_height="wrap_content">
         <TableRow
             android:padding="5dp"
-            android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tratta:"
-                android:gravity="center"
                 android:paddingTop="10dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:paddingBottom="0dp"
-                android:id="@+id/tratta"/>
+                android:id="@+id/texttratta"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="asd"
-                android:gravity="center"
+                android:gravity="left"
                 android:paddingTop="10dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:paddingBottom="0dp"
-                android:id="@+id/testotratta"/>
+                android:id="@+id/trattaPartenza"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="asd"
+                android:gravity="left"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="0dp"
+                android:id="@+id/trattaArrivo"/>
         </TableRow>
         <TableRow
             android:padding="5dp"
