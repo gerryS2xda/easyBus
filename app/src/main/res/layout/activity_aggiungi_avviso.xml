@@ -20,38 +20,68 @@
             app:popupTheme="@style/PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
-
-    <include layout="@layout/content_aggiungi_avviso" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical">
     <!-- non vedo l'activity -->
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Aggiungi Avviso"/>
+        android:text="Aggiungi Avviso"
+        android:layout_gravity = "center_horizontal"
+        android:textSize = "26sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="50dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Titolo"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/titolo"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Descrizione"/>
+        android:text="Titolo"
+        android:layout_gravity = "center_horizontal"
+        android:textSize = "26sp"
+        android:textColor="#000000"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/descrizione"/>
-    <Button
+        android:id="@+id/titolo"
+        android:layout_marginBottom="50dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descrizione"
+            android:layout_gravity = "center_horizontal"
+            android:textSize = "26sp"
+            android:textColor="#000000"/>
+
+        <EditText
+            android:id="@+id/descrizione"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:background="#ffffff"
+            android:inputType="textMultiLine"
+            android:lines="12"
+            android:overScrollMode="always"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:scrollHorizontally="false"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="pubblica"
         android:id="@+id/pubblica"
-        android:onClick="pubblica"/>
+        android:onClick="pubblica"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        style = "@style/Widget.AppCompat.Button.Colored"
+        android:layout_gravity="center_horizontal"/>
 
+        <!--
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
@@ -59,5 +89,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email" />
+        -->
+    </LinearLayout>
 
 </LinearLayout>
