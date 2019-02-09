@@ -1,9 +1,12 @@
 package exam.ium.di.easybus.bean;
 
+import java.util.List;
+
 public class Studente extends Utente {
 
     //instance field
     private CreditCard card;
+    private List<Biglietto> biglietti;
 
     //constructor
     public Studente(){
@@ -23,5 +26,9 @@ public class Studente extends Utente {
     public void setCard(CreditCard card) {
 
         this.card = card;
+    }
+    public List<Biglietto> getBiglietti()
+    {
+        return this.biglietti;
     }
 }

@@ -7,14 +7,16 @@
     android:gravity="center">
     <TableLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:stretchColumns="2">
+        android:layout_height="wrap_content">
         <TableRow
-            android:padding="15dp">
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tratta"
+                android:text="Tratta:"
                 android:gravity="center"
                 android:paddingTop="10dp"
                 android:paddingLeft="10dp"
@@ -33,11 +35,14 @@
                 android:id="@+id/testotratta"/>
         </TableRow>
         <TableRow
-            android:padding="15dp">
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ID Biglietto"
+                android:text="tipo di Biglietto:"
                 android:gravity="center"
                 android:paddingTop="0dp"
                 android:paddingLeft="10dp"
@@ -47,7 +52,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2"
+                android:text="A2"
                 android:gravity="center"
                 android:paddingTop="0dp"
                 android:paddingLeft="10dp"
@@ -55,7 +60,115 @@
                 android:paddingBottom="0dp"
                 android:id="@+id/idBiglietto"/>
         </TableRow>
+        <TableRow
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prezzo:"
+                android:gravity="center"
+                android:paddingTop="0dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="0dp"
+                android:id="@+id/prezzotesto"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.20€"
+                android:gravity="center"
+                android:paddingTop="0dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="0dp"
+                android:id="@+id/prezzo"/>
+        </TableRow>
+        <Button android:id="@+id/convalida_btn"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="50dp"
+            android:layout_width="100dp"
+            android:text="Convalida"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            style = "@style/Widget.AppCompat.Button.Colored"
+            android:layout_gravity="center"
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dati Convalida:"
+                android:gravity="center"
+                android:paddingTop="0dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="0dp"
+                android:layout_column="0"/>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ora:"
+                android:gravity="center"
+                android:paddingTop="0dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="0dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10:00"
+                android:gravity="center"
+                android:paddingTop="0dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="0dp"
+                android:id="@+id/ora_con"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data:"
+                android:gravity="center"
+                android:paddingTop="0dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="0dp"
+                android:id="@+id/data"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10/11/18"
+                android:gravity="center"
+                android:paddingTop="0dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="0dp"
+                android:id="@+id/data_con"
+                />
+        </TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convalidato"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="#4CAF50"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:paddingTop="0dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="0dp"
+            android:id="@+id/esito_con"
+            />
     </TableLayout>
-
 
 </LinearLayout>
