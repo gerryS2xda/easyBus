@@ -14,9 +14,15 @@
             android:label="@string/title_activity_visualizza_avvisi"
             android:parentActivityName=".StudentActivity"
             android:theme="@style/NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!--
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="exam.ium.di.easybus.StudentActivity" />
+                android:value="exam.ium.di.easybus.StudentActivity" /> -->
         </activity>
         <activity
             android:name=".SegnalazioneActivity"
@@ -37,11 +43,7 @@
                 android:value="exam.ium.di.easybus.ImpiegatoActivity" />
         </activity>
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".WelcomeActivity" />
         <activity android:name=".StudentActivity" />

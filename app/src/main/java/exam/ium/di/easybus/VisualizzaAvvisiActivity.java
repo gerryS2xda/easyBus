@@ -6,11 +6,13 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -33,6 +35,9 @@ public class VisualizzaAvvisiActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        populateAvviso= new PopulateAvviso();
+        lista= findViewById(R.id.listaAvvisi);
+
         //spinner
         spinner = (Spinner) findViewById(R.id.aziende);
         // Create an ArrayAdapter using the string array and a default spinner layout
@@ -43,26 +48,41 @@ public class VisualizzaAvvisiActivity extends AppCompatActivity {
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
 
-        /*spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                Toast.makeText(parent.getContext(),
+//                        "OnItemSelectedListener : " + parent.getItemAtPosition(position).toString(),
+//                        Toast.LENGTH_SHORT).show();
+//                String azienda = parent.getItemAtPosition(position).toString();
+//                Log.d("MYDEBUG",""+azienda);
+//                avvisi= populateAvviso.getByAzienda(azienda);
+//                adapterAvviso.notifyDataSetChanged();
+                //lista view
                 String azienda = parent.getItemAtPosition(position).toString();
-                avvisi= populateAvviso.getByAzienda(azienda);
-                adapterAvviso.notifyDataSetChanged();
+                avvisi = populateAvviso.getByAzienda(azienda);
+                //Log.d("MYGEBUD",""+avvisi.get(0));
+                if(avvisi != null) {
+                    adapterAvviso=new AdapterAvviso(getApplicationContext(),avvisi);
+                    lista.setAdapter(adapterAvviso);
+                }
+                if(avvisi.size() ==0){
+                    Avviso av=new Avviso();
+                    av.setOggetto("Non ci sono avvisi");
+                    avvisi.add(av);
+                    adapterAvviso=new AdapterAvviso(getApplicationContext(),avvisi);
+                    lista.setAdapter(adapterAvviso);
+                }
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
-        });*/
+        });
 
-        //lista view
-        populateAvviso= new PopulateAvviso();
-        lista= findViewById(R.id.listaAvvisi);
-        avvisi = populateAvviso.getByAzienda("AIR");
-        adapterAvviso=new AdapterAvviso(this,avvisi);
-        lista.setAdapter(adapterAvviso);
+
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 

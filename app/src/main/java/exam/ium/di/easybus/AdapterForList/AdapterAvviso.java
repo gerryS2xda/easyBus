@@ -47,9 +47,9 @@ public class AdapterAvviso extends BaseAdapter {
         Avviso av = new Avviso();
         av= avvisi.get(position);
 
-        TextView titolo = (TextView) convertView.findViewById(R.id.titolo);
-        TextView data = (TextView) convertView.findViewById(R.id.data);
-        TextView oggetto = (TextView) convertView.findViewById(R.id.descrizione);
+        TextView titolo = (TextView) convertView.findViewById(R.id.oggetto_row_avviso);
+        TextView data = (TextView) convertView.findViewById(R.id.data_row_avviso);
+        TextView oggetto = (TextView) convertView.findViewById(R.id.descrizione_row_avviso);
 
         titolo.setText(av.getOggetto());
         data.setText(av.getDataPubblicazione());
