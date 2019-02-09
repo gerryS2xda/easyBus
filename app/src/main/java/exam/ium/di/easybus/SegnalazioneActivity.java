@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -18,6 +19,7 @@ public class SegnalazioneActivity extends AppCompatActivity {
     private EditText oggetto;
     private Spinner spinner;
     private EditText descrizione;
+    private String tipo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,13 +38,28 @@ public class SegnalazioneActivity extends AppCompatActivity {
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
 
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                tipo = parent.getItemAtPosition(position).toString();
+
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        oggetto=findViewById(R.id.oggetto);
+        descrizione= findViewById(R.id.descrizione);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public void invia(View view) {
-        oggetto=view.findViewById(R.id.oggetto);
-        String tipo=(String) spinner.getSelectedItem();
-        descrizione= view.findViewById(R.id.descrizione);
         String og=oggetto.getText().toString();
         String desc=descrizione.getText().toString();
 
