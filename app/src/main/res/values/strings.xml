@@ -13,5 +13,6 @@
         <item>Sostituzione pullman</item>
         <item>Aloca pullman</item>
     </string-array>
+    <string name="title_activity_visualizza_avvisi">VisualizzaAvvisiActivity</string>
 
 </resources>
