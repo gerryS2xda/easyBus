@@ -1,6 +1,8 @@
 package exam.ium.di.easybus.populate;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import exam.ium.di.easybus.bean.Segnalazione;
@@ -19,7 +21,20 @@ public class PopulateSegnalazione {
         return segnalazioni;
     }
 
-    public void add(Segnalazione segn) {
+    public void add(String oggetto, String tipo, String descrizione) {
+        Segnalazione segn=new Segnalazione();
+        segn.setId(segnalazioni.size()+1);
+        segn.setOggetto(oggetto);
+        segn.setTipo(tipo);
+        segn.setDescrizione(descrizione);
+
+        //data odierna
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = new Date();
+        segn.setDataPubblicazione(formatter.format(date));
+
+        //set mittente e destinatario
+
         segnalazioni.add(segn);
     }
 
