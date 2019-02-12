@@ -1,5 +1,6 @@
 package exam.ium.di.easybus;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -42,25 +43,21 @@ public class BigliettoActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //dialog qrcode
-        final Dialog dialog = new Dialog(this);
-        dialog.setContentView(R.layout.layout_dialog);
-        dialog.setTitle("poggia il dispositivo sullo scanner...");
-        ImageView image = (ImageView) dialog.findViewById(R.id.image);
-        Button button=findViewById(R.id.dialogButtonOK);
-        dialog.show();
 
-        button.setOnClickListener(new View.OnClickListener()
-        {
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
     }
 
-    public void convalida(View view)
-    {
-        Toast.makeText(this,"funonzia",Toast.LENGTH_SHORT).show();
+    public void convalida(View view) throws InterruptedException {
+
+        //dialog qrcode
+        final Dialog dialog = new Dialog(this);
+
+        dialog.setContentView(R.layout.layout_dialog);
+//        dialog.setTitle("poggia il dispositivo sullo scanner...");
+        ImageView image = (ImageView) dialog.findViewById(R.id.image);
+
+        dialog.show();
+        Toast.makeText(this,"poggia il dispositivo sullo scanner...",Toast.LENGTH_LONG).show();
+
     }
 
 }
