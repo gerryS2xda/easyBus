@@ -21,5 +21,6 @@
         <item>Flix Bus</item>
     </string-array>
     <string name="title_activity_visualizza_avvisi">VisualizzaAvvisiActivity</string>
+    <string name="title_activity_biglietto">BigliettoActivity</string>
 
 </resources>

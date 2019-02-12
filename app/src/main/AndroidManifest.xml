@@ -10,6 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
         <activity
+            android:name=".BigliettoActivity"
+            android:label="@string/title_activity_biglietto"
+            android:parentActivityName=".StudentActivity"
+            android:theme="@style/NoActionBar">
+
+        </activity>
+        <activity
             android:name=".VisualizzaAvvisiActivity"
             android:label="@string/title_activity_visualizza_avvisi"
             android:parentActivityName=".StudentActivity"
@@ -32,7 +39,7 @@
             android:label="@string/title_activity_aggiungi_avviso"
             android:parentActivityName=".ImpiegatoActivity"
             android:theme="@style/NoActionBar">
-           <meta-data
+            <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="exam.ium.di.easybus.ImpiegatoActivity" />
         </activity>
@@ -42,9 +49,11 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data
+                 android:name="android.support.PARENT_ACTIVITY"
+                 android:value="exam.ium.di.easybus.StudentActivity" />
         </activity>
         <activity android:name=".WelcomeActivity" />
-        <activity android:name=".BigliettoActivity" />
         <activity android:name=".StudentActivity" />
         <activity android:name=".ImpiegatoActivity" />
         <activity android:name=".AutistaActivity" />
