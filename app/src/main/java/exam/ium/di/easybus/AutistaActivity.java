@@ -1,17 +1,35 @@
 package exam.ium.di.easybus;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import java.util.List;
+
+import exam.ium.di.easybus.bean.Autista;
+import exam.ium.di.easybus.populate.PopulateUserAccount;
 
 public class AutistaActivity extends Activity {
+
+    private Autista mAutistaLogged;
+    private PopulateUserAccount mUserPopulate;
+    private TextView mNomeAutista;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_autista);
+
+        mUserPopulate = new PopulateUserAccount();
+        Intent intent = getIntent();
+        setAutistaLogged(intent.getIntExtra("AUTISTA_LOGGED", 0));
+
+        mNomeAutista = findViewById(R.id.nomeAutista);
+        mNomeAutista.setText(mAutistaLogged.getName());
     }
 
     @Override
@@ -33,5 +51,10 @@ public class AutistaActivity extends Activity {
                 return super.onOptionsItemSelected(item);
         }
         return true;
+    }
+
+    public void setAutistaLogged(int index){
+        List<Autista> autisti = mUserPopulate.getAutisti();
+        mAutistaLogged = autisti.get(index);
     }
 }

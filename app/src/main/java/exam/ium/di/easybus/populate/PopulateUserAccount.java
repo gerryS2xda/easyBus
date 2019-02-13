@@ -12,13 +12,19 @@ import exam.ium.di.easybus.bean.Impiegato;
 
 public class PopulateUserAccount {
 
+    private List<Studente> studenti;
+    private List<Autista> autisti;
+    private List<Impiegato> impiegati;
+
     public PopulateUserAccount(){
-        //vuoto -- possibile utilizzo di un attributo type per il tipo di utente
+        populateStudent();
+        populateAutisti();
+        populateImpiegati();
     }
 
     //riempi automaticamente una lista di studenti (5)
-    public List<Studente> populateStudent(){
-        List<Studente> studenti = new ArrayList<Studente>();
+    public void populateStudent(){
+        studenti = new ArrayList<Studente>();
         studenti.add(new Studente("Gerardo", "Laucella", "M", 22, "gerrys2xda", "123asd", createCreditCardRandom()));
         studenti.add(new Studente("Rocco", "Lo Conte", "M", 22, "rloConte22", "123asd", createCreditCardRandom()));
         studenti.add(new Studente("Laura", "Rossi", "F", 19, "lauraF19", "123asd", createCreditCardRandom()));
@@ -27,23 +33,20 @@ public class PopulateUserAccount {
         studenti.add(new Studente("Gennaro", "Teodoro", "M", 20, "gennTeodoro20", "123asd", createCreditCardRandom()));
         studenti.add(new Studente("Francesco", "Maddaloni", "M", 20, "frankMad20", "123asd", createCreditCardRandom()));
         studenti.add(new Studente("Gianluca", "Di Lillo", "M", 21, "gianDiLillo21", "123asd", createCreditCardRandom()));
-        return studenti;
     }
 
     //riempi automaticamente una lista di autisti (2)
-    public List<Autista> populateAutisti(){
-        List<Autista> autisti = new ArrayList<Autista>();
+    public void populateAutisti(){
+        autisti = new ArrayList<Autista>();
         autisti.add(new Autista("Andrea", "Laucella", "M", 49, "andrLauc72", "123asd", generateMatricola()));
         autisti.add(new Autista("Giuseppe", "Paolisi", "M", 38, "gpaolisi", "123asd", generateMatricola()));
-        return autisti;
     }
 
     //riempi automaticamente una lista di impiegati (2)
-    public List<Impiegato> populateImpiegati(){
-        List<Impiegato> impiegati = new ArrayList<Impiegato>();
+    public void populateImpiegati(){
+        impiegati = new ArrayList<Impiegato>();
         impiegati.add(new Impiegato("Giacomo", "Ressa", "M", 38, "giacRessa38", "123asd", generateMatricola()));
         impiegati.add(new Impiegato("Antonio", "Cerasuolo", "M", 34, "antoCeras22", "123asd", generateMatricola()));
-        return impiegati;
     }
 
     public CreditCard createCreditCardRandom(){
@@ -81,5 +84,24 @@ public class PopulateUserAccount {
         Random r = new Random();
         str += r.nextInt(1000);
         return str;
+    }
+
+    public List<Studente> getStudenti() {
+        return studenti;
+    }
+
+    public List<Autista> getAutisti() {
+        return autisti;
+    }
+
+    public List<Impiegato> getImpiegati() {
+        return impiegati;
+    }
+
+    public void addStudente(Studente s){
+        if(s.getCard() == null){
+            s.setCard(createCreditCardRandom());
+        }
+        studenti.add(s);
     }
 }

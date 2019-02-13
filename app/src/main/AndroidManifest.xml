@@ -53,10 +53,18 @@
                  android:name="android.support.PARENT_ACTIVITY"
                  android:value="exam.ium.di.easybus.StudentActivity" />
         </activity>
-        <activity android:name=".WelcomeActivity" />
         <activity android:name=".StudentActivity" />
         <activity android:name=".ImpiegatoActivity" />
         <activity android:name=".AutistaActivity" />
+        <activity
+            android:name=".RegistrationStudentActivity"
+            android:label="@string/title_activity_registration_student"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="exam.ium.di.easybus.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -46,7 +46,8 @@
             android:textSize="18sp"
             android:textColor="#ffffff"
             style = "@style/Widget.AppCompat.Button.Colored"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:onClick="openLoginDialog"/>
 
         <Button android:id="@+id/view_orari_btn"
             android:layout_marginTop="16dp"
@@ -80,6 +81,6 @@
             android:layout_height="wrap_content"
             android:text = "Registrati"
             android:textSize = "18sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"/>
     </LinearLayout>
 </RelativeLayout>
