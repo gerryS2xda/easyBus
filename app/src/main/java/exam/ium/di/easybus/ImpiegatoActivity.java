@@ -6,14 +6,30 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.TextView;
+
+import java.util.List;
+
+import exam.ium.di.easybus.bean.Impiegato;
+import exam.ium.di.easybus.populate.PopulateUserAccount;
 
 public class ImpiegatoActivity extends Activity {
+
+    private Impiegato mImpiegatoLogged;
+    private PopulateUserAccount mUserPopulate;
+    private TextView mNomeImpiegato;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_impiegato);
+
+        mUserPopulate = new PopulateUserAccount();
+        Intent intent = getIntent();
+        setImpiegatoLogged(intent.getIntExtra("IMP_LOGGED", 0));
+
+        mNomeImpiegato = findViewById(R.id.nomeImp);
+        mNomeImpiegato.setText(mImpiegatoLogged.getName());
     }
 
     @Override
@@ -37,9 +53,9 @@ public class ImpiegatoActivity extends Activity {
         return true;
     }
 
-    public void aggiungiAvviso(View view) {
-        Intent i= new Intent(this,AggiungiAvviso.class);
-
-        startActivity(i);
+    public void setImpiegatoLogged(int index){
+        List<Impiegato> impiegati = mUserPopulate.getImpiegati();
+        mImpiegatoLogged = impiegati.get(index);
     }
 }
+
