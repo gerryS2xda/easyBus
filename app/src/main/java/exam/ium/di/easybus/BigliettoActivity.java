@@ -56,7 +56,7 @@ public class BigliettoActivity extends AppCompatActivity {
         ImageView image = (ImageView) dialog.findViewById(R.id.image);
 
         dialog.show();
-        Toast.makeText(this,"poggia il dispositivo sullo scanner...",Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"poggia il dispositivo sullo scanner...",Toast.LENGTH_SHORT).show();
 
     }
 
